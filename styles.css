@@ -1,19 +1,96 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+body, html {
+  height: 100%;
+  margin: 0;
+}
+ * {
+  box-sizing: border-box;
+ }
 
- body {
-    background-image:url('Alt-Clouds.jpg');
-  background-size:cover; 
-        -webkit-animation: slidein 100s;
-        animation: slidein 100s;
 
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
+ .bg-image {
+  height:100%;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+ }
 
-        -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
 
-        -webkit-animation-direction: alternate;
-        animation-direction: alternate;             
+.img1 {background-image: url("Alt-Clouds.jpg");}
+
+
+.flyBy {
+  color: white;
+  font: Source Code Pro;
+  font-size: 40px;
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: ticker 12s linear infinite;
+  -webkit-animation: ticker 12s linear infinite;
+  animation: ticker 12s linear infinite;
+}
+
+@-moz-keyframes ticker {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+@-webkit-keyframes ticker {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes ticker {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+
+
+h2 {
+  white-space: pre-line;
+  color: white;
+  font-size: 100px;
+  text-align: left;
+  animation: fadein 4s;
+  margin-top: 15vh;
+  margin-left: 80vh;
+  float: left;
+}
+
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+.img2 {background-image: url("Cityscape.jpg");}
+
+.img1 , .img2 {
+  -webkit-animation: slidein 100s;
+  animation: slidein 100s;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;              
 }
 
 @-webkit-keyframes slidein {
@@ -23,28 +100,5 @@ to {background-position: -100px 0px;background-size:2750px;}
 
 @keyframes slidein {
 from {background-position: top;background-size:3000px; }
-to {background-position: -100px 0px;background-size:2750px;}
+to {background-position: -100px 0px;background-size:2750px;}}
 
-} 
-
-
-
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(75, 75, 250, 0.3);
-  border-radius: 3px; 
-}
-.center h1{
-  text-align:center;
-  color:white;
-  font-family: 'Source Code Pro', monospace;
-  text-transform:uppercase;
-}

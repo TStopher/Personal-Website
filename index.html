@@ -11,16 +11,30 @@
 
     <body>
     
-        <div class="bg-image img1">
-                <div class="flyBy">
-                 <span>Open to Work</span>
+        <section class="bg-image img1">
+            <div class="flyBy">
+                <span>Could work I guess</span>
             </div>
             <h2>
                 <span>My</span>
                 <span>Personal</span>
                 <span>Website</span>
             </h2>
-        </div>
-        <div class="bg-image img2"></div>
-    
+            <div class="fancy-stuff" data-tilt data-tilt-reverse data-tilt-scale="1.1" = "true">
+                <h3 class="stuff">By Tyler Stopher</h3>
+            </div>
+        </section>
+        <section class="bg-image img2"></section>
+        <script type="text/javascript" 
+        src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.js">
+        </script>
+        <script>
+            VanillaTilt.init(document.querySelector(".fancy-stuff"), {
+                max: 25,
+                speed: 400,
+                easing: "cubic-bezier(.05,.80,.60,.99)",
+                perspective: 500,
+                transition: true
+            })
+        </script>
     </body>

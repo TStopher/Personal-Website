@@ -11,7 +11,7 @@
 
     <body>
     
-        <section class="bg-image img1">
+        <section id="home"class="bg-image img1">
             <div class="flyBy">
                 <span>Could work I guess</span>
             </div>
@@ -20,14 +20,22 @@
                 <span>Personal</span>
                 <span>Website</span>
             </h2>
+            <div class="links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="about"class="bg-image img2">
             <div class="fancy-stuff" data-tilt data-tilt-reverse data-tilt-scale="1.1" = "true">
                 <h3 class="stuff">By Tyler Stopher</h3>
             </div>
         </section>
-        <section class="bg-image img2"></section>
         <script type="text/javascript" 
         src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.js">
-        </script>
+         </script>
         <script>
             VanillaTilt.init(document.querySelector(".fancy-stuff"), {
                 max: 25,

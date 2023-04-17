@@ -85,9 +85,13 @@ h2 {
   font-size: 100px;
   text-align: left;
   animation: fadein 11s;
-  margin-top: 6vh;
+  margin-top: 1vh;
   margin-left: 80vh;
   float: left;
+  transition: transform 0.5s ease-in-out;
+}
+.h2-class:hover {
+  transform: translateY(-5px);
 }
 
 @keyframes fadein {
@@ -169,6 +173,55 @@ a {
 
 .img2 {background-image: url("Night-Cityscape.jpg");
 position: relative;
+}
+
+.title-bit {
+  font: Source Code Pro;
+  color: white;
+  font-size: xx-large;
+  margin-left: 15%;
+}
+.interest-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 78vh;
+  border: solid white;
+  flex-wrap: nowrap;
+  max-width: 100%;
+}
+
+.interest-container:hover p:nth-child(1) {
+  transform: translateX(-10px);
+}
+
+.interest-container:hover p:nth-child(2) {
+  transform: translateX(-20px);
+}
+
+.interest-container:hover p:nth-child(3) {
+  transform: translateX(-30px);
+}
+
+.interest-container:hover p:nth-child(4) {
+  transform: translateX(-40px);
+}
+
+.interest-container:hover p:nth-child(5) {
+  transform: translateX(-50px);
+}
+
+
+.interest {
+  padding: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  border: solid white;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 .img1, .img2 {
